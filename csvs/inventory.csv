@@ -1,0 +1,13 @@
+animal_name,animal_type,gender,age,image_url,origin,price,sold,date_acquired
+Ben,sloth,male,31,images/animalistnews--0372--8-reasons-to-love-sloths-even-more--large.thumb.jpg,domestic,150.00,FALSE,1/19/16
+Kathy,sloth,female,28,images/large-Three-toed-Sloth-photo.jpg,imported,500.00,FALSE,6/1/15
+Dennis,sloth,male,32,images/sloth_(c)_Jorge_Salas_International_Expeditions.jpeg,domestic,31.00,FALSE,2/20/16
+Caleb,sloth,male,28,images/large-Three-toed-Sloth-photo.jpg,imported,5100.00,FALSE,10/10/15
+Roger,snail,male,12,images/snail.jpeg,domestic,25.00,FALSE,11/6/15
+Clotilda,snail,female,10,images/snail.jpeg,domestic,150.00,FALSE,3/20/15
+Quinten,snail,male,4,images/snail.jpeg,imported,120.00,FALSE,4/1/15
+Jolene,snail,female,27,images/snail.jpeg,domestic,10.00,FALSE,5/3/15
+Leonard,snail,male,16,images/snail.jpeg,imported,27000.00,FALSE,7/7/15
+Tigger,turtle,male,8,images/turtle.jpg,domestic,220.00,FALSE,2/4/15
+Angelle,turtle,female,12,images/turtle.jpg,imported,221.00,FALSE,12/25/15
+Hephaistos,turtle,male,20,images/turtle.jpg,imported,1022.00,FALSE,3/1/16
