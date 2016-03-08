@@ -29,6 +29,4 @@ router.get('/admin', function(req, res, next) {
 	});
 });
 
->>>>>>> 6ebbfe54213763ba26aa4b93c8fbfd0b3d5d119c
-
 module.exports = router;
