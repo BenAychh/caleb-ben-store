@@ -16,6 +16,12 @@ router.get('/', function(req, res, next) {
 	});
 });
 
+router.get('/admin', function(req, res, next) {
+	
+	res.render('admin', {
+		title: 'Super Slow Pets'
+	});
+});
 
 
 module.exports = router;
