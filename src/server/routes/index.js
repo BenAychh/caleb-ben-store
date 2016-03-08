@@ -7,7 +7,7 @@ function Animals() {
 }
 
 router.get('/', function(req, res, next) {
-	
+
 	Animals().select('*').orderBy('animal_name').then(function(result){
 			res.render('index', {
 				'title': 'Super Slow Pets',
@@ -16,6 +16,10 @@ router.get('/', function(req, res, next) {
 	});
 });
 
-
+router.get('/json/inventory', function(req, res, next) {
+	Animals().select().then(function(results) {
+		res.json(results);
+	});
+});
 
 module.exports = router;
