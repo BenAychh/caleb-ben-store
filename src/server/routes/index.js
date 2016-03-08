@@ -16,15 +16,14 @@ router.get('/', function(req, res, next) {
 	});
 });
 
-<<<<<<< HEAD
 router.get('/json/inventory', function(req, res, next) {
 	Animals().select().then(function(results) {
 		res.json(results);
 	});
 });
-=======
+
 router.get('/admin', function(req, res, next) {
-	
+
 	res.render('admin', {
 		title: 'Super Slow Pets'
 	});
