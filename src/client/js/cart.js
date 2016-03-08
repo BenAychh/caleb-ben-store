@@ -55,7 +55,6 @@ function generateReceipt(localDisplayStyle) {
     url: '/json/inventory/',
     method: 'GET'
   }).then(function(data) {
-    console.log(data);
     if (displayStyle === "sidebar") {
       // Where to store the item list
       var container = $('#receipt');
@@ -72,22 +71,20 @@ function generateReceipt(localDisplayStyle) {
         // Start a table.
         var innerHTML = '<div class="row">';
         keys.forEach(function(key) {
-          // Get the animal.
-          var animalType = getAnimalFromID(key);
           // Filter should only be one animal because of the id.
-          var animal = data[animalType].filter(function(specificAnimal) {
-            return specificAnimal.id === key;
+          var animal = data.filter(function(specificAnimal) {
+            console.log(specificAnimal);
+            return specificAnimal.id == key;
           })[0];
           // Populate the row with data.
           innerHTML += '<div class="panel panel-default' + displayStyle +'">' +
             '<div class="panel-body">' +
-            '<h3>' + animal.name + '</h3>' +
+            '<h3>' + animal.animal_name + '</h3>' +
             '<h5>Gender: ' + animal.gender + '</h5>' +
-            '<h5>Species: ' +
-              animalType.substring(0, animalType.length - 1) + '</h5>' +
+            '<h5>Species: ' + animal.animal_type + '</h5>' +
             '<h5>Origin: ' + animal.origin + '</h5>' +
             '<h5>Price: $' + animal.price + '</h5>' +
-            '<p><img class="img-responsive img-rounded" src="' + animal.image + '"></p>' +
+            '<p><img class="img-responsive img-rounded" src="' + animal.image_url + '"></p>' +
             '<p>' +
               '<button onclick="removeItem(\'' + animal.id + '\')">Remove!' +
               '</button></p>' +
@@ -159,17 +156,6 @@ function generateReceipt(localDisplayStyle) {
       }
     }
   });
-}
-// Converts the id to an animal for JSON accessibility.
-function getAnimalFromID(id) {
-  switch (id.substring(0, 2)) {
-    case 'sl':
-      return 'sloths';
-    case 'sn':
-      return 'snails';
-    case 'tu':
-      return 'turtles';
-  }
 }
 // Remove an item from the cart and reenable the add to cart button.
 function removeItem(animalID) {
