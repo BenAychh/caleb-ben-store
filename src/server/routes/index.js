@@ -22,10 +22,19 @@ router.get('/json/inventory', function(req, res, next) {
 	});
 });
 
+//admin 
 router.get('/admin', function(req, res, next) {
 
 	res.render('admin', {
 		title: 'Super Slow Pets'
+	});
+});
+
+//profile
+router.get('/profile', function(req, res, next) {
+
+	res.render('profile', {
+		title: 'Super Slow Pets: Customer Profile'
 	});
 });
 

@@ -9,7 +9,7 @@
   	<div class="container">
   		<div class="row">
 	    	<style>
-	      		#myCarousel .slider-size {height: 500px; width: 100%;}
+	      		#myCarousel .slider-size {height: 400px; width: 100%;}
 	    	</style>
 	    	<div id="myCarousel" class="carousel slide" data-ride="carousel">
     		<!-- Indicators -->
@@ -23,20 +23,16 @@
     		<!-- Wrapper for slides -->
     		<div class="carousel-inner" role="listbox">
       			<div class="item active slider-size">
-        			<img src="https://images.unsplash.com/photo-1452942000102-9c4c7aaeac81?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300" alt="Turtle">
+        			<a href='/products.html'><img src="https://images.unsplash.com/photo-1452942000102-9c4c7aaeac81?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300" alt="Turtle" style="height: 100%; width: 100%"></a>
 	      		</div>
 
-		      	<div class="item slider-size">
-		        	<img src="https://images.unsplash.com/photo-1428672824825-ac9b4adc2cd6?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300" alt="Chania">
-		      	</div>
+      			{% for animal in animals %}
 
-		      	<div class="item slider-size">
-		        	<img src="https://images.unsplash.com/photo-1428973085873-61a784626aad?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300" alt="Flower">
-		      	</div>
+      			<div class="item slider-size">
+        			<a href='/products.html'><img src="{{animal.image_url}}" alt="Don't break these dummy!" style="height: 100%; width: 100%"></a>
+	      		</div>
 
-		      	<div class="item slider-size">
-		        	<img src="https://images.unsplash.com/photo-1421882100557-2daba9680b08?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300" alt="Flower">
-		      	</div>
+	      		{% endfor %}
 		  	</div>
 
   			<!-- Left and right controls -->
@@ -51,45 +47,17 @@
 			</div>
   		</div>
 
-  		<div class="row text-center">
-    		<h2>Products</h2>
-  		</div>
-  		<div class="row text-center">
-    		<div class="col-md-4 hover" id="item1"></div>
-    		<div class="col-md-4 hover" id="item2"></div>
-    		<div class="col-md-4 hover" id="item3"></div>
-  		</div>
   		<div>&nbsp;</div>
   		<div class="row text-center" style="background-color: #EFEFEF;">
 	    	<form>
 	      		<h2 class="text-center">Signup Today!</h2>
-	      		<p>Signup and learn more about Sloths.</p>
+	      		<p>Signup and learn more about {{title}}.</p>
 	      		<input type="email" name="email-signup" placeholder="slow@sloths.net" id="email-signup-input">
 	      		<input type="submit" name="submit" id="email-signup-submit">
 	      		<div>&nbsp;</div>
+	      		<a href='http://www.jankyteacher.com'>More Information</a>
 	    	</form>
   		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div class="row"> <!-- footer -->
-    		<div class="col-md-3">
-      			<h3 class="text-center">Visit Us</h3>
-      			<img class="img-responsive center-block" src="images/map.png" alt="zootopia"/>
-			</div>
-    		<div class="col-md-3">
-      			<h3 class="text-center">Resources</h3>
-        		<span class="glyphicon glyphicon-search" aria-hidden="true"></span> <a href="#">Item One</a> <br>
-        		<span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> <a href="#">Item Two</a> <br>
-        		<span class="glyphicon glyphicon-music" aria-hidden="true"></span> <a href="#">Item Three</a> <br>
-        		<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> <a href="#">Item Four</a>
-    		</div>
-
-	    </div>
   	</div>
-
-
 
 {% endblock %}
