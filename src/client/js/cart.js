@@ -146,7 +146,18 @@ function generateReceipt(localDisplayStyle) {
             '<td class="col-md-1 invisible"></td>' +
             '<td class="col-md-1 invisible"></td>' +
             '<td class="col-md-1 text-right">Total: </td>' +
-            '<td class="col-md-1 ">$' + total + '</td>' +
+            '<td class="col-md-1 ">$' + total + '<br>' +
+            '<form action="/charge" method="POST">' +
+               '<script ' +
+                 'src="https:\/\/checkout.stripe.com\/checkout.js" class="stripe-button" ' +
+                 'data-key="pk_test_Tr9EjI7HzmDVunxlFzzCJtLV" ' +
+                 'data-amount="' + total * 100 + '" ' +
+                 'data-name="Stripe Example" ' +
+                 'data-description="Pay Me!" ' +
+                 'data-currency="usd"> ' +
+                 '</script> ' +
+            '</form> ' +
+            '</td>' +
             '<td class="col-md-1 invisible"></td>' +
             '<td class="col-md-1 invisible"></td>' +
             '</tr></table>';
