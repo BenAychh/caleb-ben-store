@@ -5,10 +5,72 @@
 
 {% block content %}
 
-  <div class="container">
+<div class="container">
+	<div class='row'>
+		<div class='col-xs-6'>
+			<form action='/admin' method='post'>
+				<h2>Add an animal</h2>
+				<br>
+				<label for='animal_name'>Animal Name</label>
+				<br>
+				<input name='animal_name' type='text' required>
+				<br><br>
+				<label for='animal_type'>Animal Type</label>
+				<br>
+				<input name='animal_type' type='text' required>
+				<br><br>
+				<label for='gender'>Animal Gender</label>
+				<br>
+				<input name='gender' type='text' required>
+				<br><br>
+				<label for='age'>Animal Gender</label>
+				<br>
+				<input name='age' type='number' required>
+				<br><br>
+				<label for='image_url'>Animal Image</label>
+				<br>
+				<input name='image_url' type='text' required>
+				<br><br>
+				<label for='origin'>Animal Origin</label>
+				<br>
+				<input name='origin' type='text' required>
+				<br><br>
+				<label for='price'>Price</label>
+				<br>
+				<input name='price' type='number' required>
+				<br><br>
+				<label for='date_acquired'>Date Acquired</label>
+				<br>
+				<input name='date_acquired' type='date' required>
+				<br><br>
+				<label for='sold'>Animal Available? Check if true.</label>
+				<br>
+				<input name='sold' type='checkbox' required>
+				<br><br>
+				<button type='submit' class='btn btn-primary addAnimal'>Add Animal</button>
+			</form>
+		</div>
+		<div class='col-xs-6'>
+			<form action='/admin' method='post'>
+				<h2>Add an employee</h2>
+				<br>
+				<label for='first_name'>Employee First Name</label>
+				<br>
+				<input name='first_name' type='text' required>
+				<br><br>
+				<label for='last_name'>Employee Last Name</label>
+				<br>
+				<input name='last_name' type='text' required>
+				<br><br>
+				<label for='position'>Employee Position</label>
+				<br>
+				<input name='position' type='text' required>
+				<br><br>
+				<button type='submit' class='btn btn-primary addEmployee'>Add Employee</button>
+			</form>
+		</div>
 
-  	<h1>{{title}}</h1>
-
-  </div>
+	</div>
+</div>
 
 {% endblock %}
