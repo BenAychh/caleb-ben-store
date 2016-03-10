@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Unit 1 Project - eCommerce Site</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet" integrity="sha256-ZSKfhECi0yCEmGVAuQLWTHtJEn2vBNPexEWsJCIC/Nc= sha512-b+mSnD4QXw1uYwkgJ3d0XxoMXo+ZKHJNTNNFIddJ0IazcwKvKYtIlWADZ1JEREJzxUG428sfCw7qDuswAFcrOQ==" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Sloth and Friends</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li class="active"><a href="checkout.html">Checkout</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="cartCount"><h4>Shopping Cart: <span></span></h4></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+  	  <h2 class="col-md-3">Checkout!</h2>
+    </div>
+  	  <div class="row">
+  		  <h3>Your Purchase:</h3>
+        <div id="receipt">
+
+        </div>
+      </div>
+    <form>
+      <h3>Shipping Information</h3>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <p class="form-control-static">First Name</p>
+        </div>
+        <div class="col-sm-4">
+          <p class="form-control-static">Last Name</p>
+        </div>
+        <div class="col-sm-4">
+          <p class="form-control-static">Email</p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="firstNameShipping" placeholder="First Name">
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="lastNameShipping" placeholder="Last Name">
+        </div>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" id="emailShipping" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group row">
+  	    <div class="col-sm-6">
+          <p class="form-control-static">Address</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="form-control-static">City</p>
+        </div>
+      </div>
+      <div class="form-group row">
+  	    <div class="col-sm-6">
+          <input type="text" class="form-control" id="addressShipping" placeholder="Address">
+        </div>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="cityShipping" placeholder="City">
+        </div>
+      </div>
+      <div class="form-group row">
+  	    <div class="col-sm-4">
+      	  <p class="form-control-static">State</p>
+        </div>
+        <div class="col-sm-4">
+      	  <p class="form-control-static">Zip Code</p>
+        </div>
+      </div>
+      <div class="form-group row">
+  	    <div class="col-sm-4">
+          <select name="state" class="form-control">
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="DC">DC</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+          </select>
+   	    </div>
+        <div class="col-sm-4">
+      	  <input type="text" class="form-control" id="zipCodeShipping" placeholder="Zip Code">
+        </div>
+        <div class="checkbox">
+  		    <label>
+    	    	<input type="checkbox" id="sameAsBilling" value="">Shipping Address Same As Billing?
+        	</label>
+   	    </div>
+      </div>
+      <div>&nbsp;</div>
+   	  <h3>Billing Information</h3>
+   	  <div class="form-group row">
+        <div class="col-sm-4">
+          <p class="form-control-static">First Name</p>
+        </div>
+        <div class="col-sm-4">
+          <p class="form-control-static">Last Name</p>
+        </div>
+        <div class="col-sm-4">
+          <p class="form-control-static">Email</p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="firstNameBilling" enabled="" placeholder="First Name">
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="lastNameBilling" enabled="" placeholder="Last Name">
+        </div>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" id="emailBilling" enabled="" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group row">
+  	    <div class="col-sm-6">
+          <p class="form-control-static">Billing Address</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="form-control-static">Billing City</p>
+        </div>
+      </div>
+      <div class="form-group row">
+  	    <div class="col-sm-6">
+          <input type="text" class="form-control" id="addressBilling" enabled="" placeholder="Billing Address">
+        </div>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="cityBilling" enabled="" placeholder="Billing City">
+        </div>
+      </div>
+      <div class="form-group row">
+  	    <div class="col-sm-4">
+        	<p class="form-control-static">Billing State</p>
+        </div>
+        <div class="col-sm-4">
+      	  <p class="form-control-static">Billing Zip Code</p>
+        </div>
+      </div>
+      <div class="form-group row">
+  	    <div class="col-sm-4">
+          <select name="state" class="form-control" id="stateBilling" enabled="">
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="DC">DC</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+          </select>
+        </div>
+        <div class="col-sm-4">
+      	  <input type="text" class="form-control" id="zipCodeBilling" enabled="" placeholder="Billing Zip Code">
+  	    </div>
+  	  </div>
+  	  <div>&nbsp;</div>
+  	  <h3>Credit Card Information</h3>
+  	  <div class="form-group row">
+  		  <div class="col-sm-4">
+  			  <p class="form-control-static">Credit Card Number</p>
+  		  </div>
+  		  <div class="col-sm-4">
+  			  <p class="form-control-static">Expiration Date</p>
+  		  </div>
+  		  <div class="col-sm-2">
+  			  <p class="form-control-static">CCV Number</p>
+  		  </div>
+  	  </div>
+  	  <div class="form-group row">
+  		  <div class="col-sm-4">
+  			  <input type="text" class="card-number form-control" id="creditCardNumber" placeholder="Credit Card Number">
+  		  </div>
+  		  <div class="col-sm-4">
+  			  <input type="text" class="card-expiry form-control" id="expirationDate" placeholder="MM/YYYY">
+  		  </div>
+  		  <div class="col-sm-2">
+  			  <input type="text" class="card-cvc form-control" id="ccvNumber" placeholder="CCV Number">
+  		  </div>
+  		  <div class="col-sm-2">
+  			  <button type="button" id="purchaseButton" class="order btn btn-success">Purchase</button>
+  		  </div>
+  	  </div>
+    </form>
+    <div>&nbsp;</div>
+   <!--body container-->
+  <div class="row"> <!-- footer -->
+    <div class="col-md-3">
+      <h3 class="text-center">Visit Us</h3>
+      <img class="img-responsive center-block" src="images/map.png" alt="zootopia"/>
+    </div>
+    <div class="col-md-3">
+      <h3 class="text-center">Resources</h3>
+      <ul>
+        <li><a href="#">Item One</a></li>
+        <li><a href="#">Item Two</a></li>
+        <li><a href="#">Item Three</a></li>
+        <li><a href="#">Item Four</a></li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h3 class="text-center">Section</h3>
+      <ul>
+        <li><a href="#">Item One</a></li>
+        <li><a href="#">Item Two</a></li>
+        <li><a href="#">Item Three</a></li>
+        <li><a href="#">Item Four</a></li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h3 class="text-center">Section</h3>
+      <ul>
+        <li><a href="#">Item One</a></li>
+        <li><a href="#">Item Two</a></li>
+        <li><a href="#">Item Three</a></li>
+        <li><a href="#">Item Four</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <!-- your code here! -->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="js/checkout.js"></script>
+  <script type="text/javascript" src="js/cart.js"></script>
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <script type="text/javascript">
+    generateReceipt('table');
+  </script>
+</body>
+
+</html>

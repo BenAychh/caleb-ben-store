@@ -121,21 +121,19 @@ function generateReceipt(localDisplayStyle) {
         '</tr>';
         keys.forEach(function(key) {
           // Get the animal.
-          var animalType = getAnimalFromID(key);
           // Filter should only be one animal because of the id.
-          var animal = data[animalType].filter(function(specificAnimal) {
-            return specificAnimal.id === key;
+          var animal = data.filter(function(specificAnimal) {
+            return specificAnimal.id == key;
           })[0];
           // Populate the row with data.
           innerHTML += '<tr>' +
-            '<td class="col-md-1">' + animal.name + '</td>' +
+            '<td class="col-md-1">' + animal.animal_name + '</td>' +
             '<td class="col-md-1">' + animal.gender + '</td>' +
-            '<td class="col-md-1">'
-              + animalType.substring(0, animalType.length - 1) + '</td>' +
+            '<td class="col-md-1">' + animal.animal_type+'</td>' +
             '<td class="col-md-1">' + animal.origin + '</td>' +
             '<td class="col-md-1">$' + animal.price + '</td>' +
             '<td class="col-md-1">' +
-              '<img class="img-responsive img-circle" src="' + animal.image + '">' + '</td>' +
+              '<img class="img-responsive img-circle" src="' + animal.image_url + '">' + '</td>' +
             '<td class="col-md-1 text-center">' +
               '<button onclick="removeItem(\'' + animal.id + '\')">Remove!' +
               '</button></td>' +
