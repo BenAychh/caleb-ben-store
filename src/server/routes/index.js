@@ -22,6 +22,7 @@ router.get('/json/inventory', function(req, res, next) {
 	});
 });
 
+//admin
 router.get('/admin', function(req, res, next) {
 
 	res.render('admin', {
@@ -45,6 +46,12 @@ router.post('/charge', function(req, res,next) {
             res.send('success');
         }
     });
+});
+//profile
+router.get('/profile', function(req, res, next) {
+	res.render('profile', {
+		title: 'Super Slow Pets: Customer Profile'
+	});
 });
 
 module.exports = router;
